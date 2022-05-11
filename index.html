@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="exoFini.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container grid grid--1x2 block">
+      <div class="input--container">
+        <input
+          onchange="handleWidth(value)"
+          type="number"
+          name="width"
+          placeholder="width"
+        />
+        <input
+          onchange="handleHeight(value)"
+          type="number"
+          name="height"
+          placeholder="height"
+        />
+        <input
+          onchange="handleColor(value)"
+          type="color"
+          name="height"
+          placeholder="height"
+        />
+        <input
+          onchange="handleBorderRadius(value)"
+          type="number"
+          name="radius"
+          placeholder="border-radius"
+        />
+
+        <br />
+        <input
+          onchange="handleBorder(value)"
+          type="number"
+          name="border"
+          placeholder="border"
+        />
+        <button onclick="generateCode()">Generer Code</button>
+      </div>
+      <div class="box--container">
+        <div class="box"></div>
+      </div>
+    </div>
+
+    <div class="container grid block code"></div>
+
+    <!-- <div class="bonus">
+        TODO Générer un chat aléatoire
+    </div> -->
+    <script src="exoFini.js"></script>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+/* Désactiver le margin de base du body et centrer tous ses éléments parent */
+body {
+    display         : flex;
+    align-items     : center;
+    margin          : 0;
+    flex-direction  : column;
+    height          : 100vh;
+    background-color: #363062;
+}
+
+/* Un container qui nous permet d'afficher les éléments sous forme de "grid" de 2 colonnes */
+.container {
+    width: 100%;
+}
+
+/* Classe réutilisable de gestion des grids */
+.grid {
+    display: grid;
+}
+
+.grid--1x2 {
+    grid-template-columns: 40% 60%;
+}
+
+/* Classe utilitaire qui permet d'avoir de l'espace entre les éléments important */
+.block {
+    padding: 6rem 0;
+}
+
+.box {
+    height          : 100px;
+    width           : 100px;
+    margin          : 1rem 0;
+    background-color: brown;
+}
+
+/* Réunir tous les inputs ensembles */
+.input--container {
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    margin         : 0 auto;
+    width          : fit-content;
+}
+
+input {
+    width : 250px;
+    margin: 0.25rem 0;
+}
+
+input[type="color"] {
+    /* Si un input est de type "color" alors lui appliquer le style ci-dessous*/
+    width      : 25px;
+    height     : 25px;
+    margin-left: auto;
+}
+
+/*  Centrer le style qui est généré dans la grid de droite */
+.box--container {
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+}
+
+/* Style du code à afficher */
+.code {
+    color         : #E9D5DA;
+    text-align    : left;
+    font-family   : "consolas";
+    font-size     : 1rem;
+    border-radius : 0.5rem;
+    width         : fit-content;
+    padding       : 1.5rem;
+    display       : flex;
+    flex-direction: column;
+    transition    : border 0.5s;
+}
+
+.code p {
+    animation: smooth 1s linear;
+}
+
+/* Animation d'apparition en fondu */
+@keyframes smooth {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
